@@ -10,13 +10,18 @@ import 'normalize.css/normalize.css'
 import './styles/styles.scss'
 import 'react-dates/lib/css/_datepicker.css'
 
+
 const store = configureStore()
-console.log('ayyyyyy')
+
+store.dispatch(addExpense({description:'asdfsf', amount: 500}))
+
 const jsx = (
     <Provider store={store}>
         <AppRouter />
     </Provider>
 )
+
+
 
 ReactDOM.render(jsx, document.getElementById('app'))
 
